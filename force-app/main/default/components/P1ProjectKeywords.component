@@ -1,0 +1,179 @@
+<apex:component controller="IfpocFormsPdfController" access="global">
+    <apex:attribute name="recordId" type="Id" description="The record Id" />
+    <div>
+        <apex:outputPanel >
+            <apex:repeat value="{!recordFields}" var="field">
+                <div c-p1projectkeywords="" class="table-container">
+                    
+                    <table c-p1projectkeywords="" class="ifpoc-table" style="width:100%;">
+                        <tbody c-p1projectkeywords="">
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="" class="table-main-heading">
+                                    <span>
+                                        <h3>2.PROJECT KEYWORDS:</h3>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table c-p1projectkeywords="" class="ifpoc-table" style="width:100%;">
+                        <tbody c-p1projectkeywords="">
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="" class="table-main-heading">
+                                    <span>
+                                        <h3>2.1 Please select and insert five codes and associated titles for keywords to describe
+                                            your project, in order of importance, from among the focus (code 1000), methodology
+                                            (code 2000) and outcomes (code 3000)</h3>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table c-p1projectkeywords="" class="ifpoc-table" style="width:100%;">
+                        <tbody c-p1projectkeywords="">
+                            <!--Grantee_Organization_Name__c-->
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="">
+                                    <lightning-input c-p1projectkeywords="" class="user-input slds-form-element" variant="label-hidden" readonly=""
+                                                     lightning-input_input-host="">
+                                        <div lightning-input_input="" part="input-text">
+                                            <label lightning-input_input="" class="slds-form-element__label slds-no-flex slds-assistive-text" for="input-1870" part="label"></label>
+                                            <div lightning-input_input="" class="slds-form-element__control slds-grow" part="input-container">
+                                                {!field.Project_Keyword_1__c}
+                                            </div>
+                                        </div>
+                                    </lightning-input>
+                                </td>
+                            </tr>
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="">
+                                    <lightning-input c-p1projectkeywords="" class="user-input slds-form-element" variant="label-hidden" readonly=""
+                                                     lightning-input_input-host="">
+                                        <div lightning-input_input="" part="input-text">
+                                            <label lightning-input_input="" class="slds-form-element__label slds-no-flex slds-assistive-text" for="input-1870" part="label"></label>
+                                            <div lightning-input_input="" class="slds-form-element__control slds-grow" part="input-container">
+                                                {!field.Project_Keyword_2__c}
+                                            </div>
+                                        </div>
+                                    </lightning-input>
+                                </td>
+                            </tr>
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="">
+                                    <lightning-input c-p1projectkeywords="" class="user-input slds-form-element" variant="label-hidden" readonly=""
+                                                     lightning-input_input-host="">
+                                        <div lightning-input_input="" part="input-text">
+                                            <label lightning-input_input="" class="slds-form-element__label slds-no-flex slds-assistive-text" for="input-1870" part="label"></label>
+                                            <div lightning-input_input="" class="slds-form-element__control slds-grow" part="input-container">
+                                                {!field.Project_Keyword_3__c}
+                                            </div>
+                                        </div>
+                                    </lightning-input>
+                                </td>
+                            </tr>
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="">
+                                    <lightning-input c-p1projectkeywords="" class="user-input slds-form-element" variant="label-hidden" readonly=""
+                                                     lightning-input_input-host="">
+                                        <div lightning-input_input="" part="input-text">
+                                            <label lightning-input_input="" class="slds-form-element__label slds-no-flex slds-assistive-text" for="input-1870" part="label"></label>
+                                            <div lightning-input_input="" class="slds-form-element__control slds-grow" part="input-container">
+                                                {!field.Project_Keyword_4__c}
+                                            </div>
+                                        </div>
+                                    </lightning-input>
+                                </td>
+                            </tr>
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="">
+                                    <lightning-input c-p1projectkeywords="" class="user-input slds-form-element" variant="label-hidden" readonly=""
+                                                     lightning-input_input-host="">
+                                        <div lightning-input_input="" part="input-text">
+                                            <label lightning-input_input="" class="slds-form-element__label slds-no-flex slds-assistive-text" for="input-1870" part="label"></label>
+                                            <div lightning-input_input="" class="slds-form-element__control slds-grow" part="input-container">
+                                                {!field.Project_Keyword_5__c}
+                                            </div>
+                                        </div>
+                                    </lightning-input>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table c-p1projectkeywords="" class="ifpoc-table" style="width:100%;">
+                        <tbody c-p1projectkeywords="">
+                            <tr c-p1projectkeywords="">
+                                <td c-p1projectkeywords="" class="table-main-heading">
+                                    <span>
+                                        <h3>Submit Document</h3>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <apex:outputPanel rendered="{!isDemoRichText1Present}">
+                        <table c-p1projectkeywords="" class="ifpoc-table" style="width:100%;">
+                            <tbody c-p1projectkeywords="">
+                                <tr c-p1projectkeywords="">
+                                    <td c-p1projectkeywords="" align="center">
+                                        <apex:image value="{!attachmentMap['Demo_Rich_Text__c'].attachmentUrl}" />
+                                        <br/>
+                                        <apex:outputText value="{!attachmentMap['Demo_Rich_Text__c'].richText}"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!NOT(isDemoRichText1Present)}">
+                        <table class="ifpoc-table" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <br/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                    
+                    <table class="ifpoc-table" style="width:100%;">
+                        <tbody>
+                            <tr>
+                                <td class="table-main-heading">
+                                    <span>
+                                        <h3>Submit Second Document</h3>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <apex:outputPanel rendered="{!isDemoRichText2Present}">
+                        <table class="ifpoc-table" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <apex:image value="{!attachmentMap['Demo_Rich_Text_2__c'].attachmentUrl}" />
+                                        <br/>
+                                        <apex:outputText value="{!attachmentMap['Demo_Rich_Text_2__c'].richText}" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!NOT(isDemoRichText2Present)}">
+                        <table class="ifpoc-table" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <br/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                </div>
+            </apex:repeat>
+        </apex:outputPanel>
+    </div>
+</apex:component>
